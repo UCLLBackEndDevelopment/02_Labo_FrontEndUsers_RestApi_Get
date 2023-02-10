@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Users</title>
+    <link type="text/css" href="styles/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/dom.js" defer></script>
+    <script type="text/javascript" src="js/overviewusers.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/users.jpg" alt="Logo image of users" class="logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="overviewusers.html">My Users</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>My Users</h2>
+      <p id="oldestUser"></p>
+      <p id="status"></p>
+      <div>
+        <label for="ageInput">Show users with age between: </label>
+        <input id="minAge" type="number" />
+        <input id="maxAge" type="number" />
+      </div>
+      <div>
+        <button id="filterByLength">Filter users</button>
+        <label for="lengthInput"> with length: </label>
+        <input id="lengthInput" type="text" />
+      </div>
+      <div>
+        <button id="resetFilters">Reset filters</button>
+      </div>
+      <table id="overviewUsersTable">
+        <caption></caption>
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+        </thead>
+        <tbody id="my-users-table-body"></tbody>
+      </table>
+    </main>
+    <footer>UCLL - 2023</footer>
+  </body>
+</html>

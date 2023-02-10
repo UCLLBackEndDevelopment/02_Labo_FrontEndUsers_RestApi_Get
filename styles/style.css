@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151723;
+  color: #ac968f;
+  font-family: verdana, sans-serif;
+  max-width: 800px;
+  margin: auto;
+}
+
+.logo {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+p#status {
+  font-style: italic;
+  color: #008b8b;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  background-color: #33395a;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav ul li a {
+  display: block;
+  color: #9fc2dd;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  transition: background-color 1s;
+}
+
+nav ul li a:hover,
+nav ul li#actual a {
+  background-color: #9fc2dd;
+  color: #33395a;
+}
+
+footer {
+  background-color: #33395a;
+  color: #9fc2dd;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  display: block;
+  padding: 20px 10px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+main ul {
+  padding-left: 20px;
+}
+
+.error {
+  color: #c70000;
+}
+
+div#error ul {
+  list-style-type: none;
+}
+
+input.error {
+  border: 2px solid c70000;
+}
+
+form > p > label:first-child,
+form > p > span {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+form label {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+form input[type=text],
+form input[type=number],
+form select {
+  width: 250px;
+}
+
+form input,
+form select,
+input {
+  height: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 100%;
+  color: #493f3c;
+  background-color: rgb(255, 255, 255);
+}
+
+form select {
+  box-sizing: content-box;
+}
+
+form input[type=submit] {
+  margin-left: calc(30% + 5px);
+  height: auto;
+  margin-top: 25px;
+}
+
+th {
+  text-align: left;
+}
+
+tr.select {
+  cursor: pointer;
+  background-color: #ffe4c4;
+}
+
+td,
+th {
+  padding: 5px 25px 5px 0;
+}
+
+strong {
+  color: #0e7bbe;
+}
+
+button {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 480px) {
+  nav ul {
+    display: block;
+  }
+  h1 {
+    background-image: url("../img/diertjesDuploKlein.jpg");
+    background-size: 80%;
+    background-position: center;
+  }
+  form > p > label:first-child,
+form > p > span {
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 10px 0 5px 0;
+  }
+  form input[type=text],
+form input[type=number],
+div#error {
+    width: 95%;
+  }
+  form input[type=submit] {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
