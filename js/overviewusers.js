@@ -1,8 +1,8 @@
 const users = []
+let adults = "no"
 const oldest = []
-const filterByLength = document.getElementById("filterByLength")
+const filterByAdults = document.getElementById("filterByAdults")
 const caption = document.querySelector("table>caption")
-const lengthInput = document.getElementById("lengthInput")
 const ageInput = document.getElementById("ageInput")
 const minAge = document.getElementById("minAge")
 const maxAge = document.getElementById("maxAge")
@@ -34,10 +34,10 @@ const renderUsers = () => {
 const fetchAndRenderUsers = async () => {
   await (async () => {
     let response, responseOldest;
-    if (lengthInput.value.length) {
-      caption.innerHTML = `Users with length ${lengthInput.value}`;
+    if (adults === "yes") {
+      caption.innerHTML = `Adult users`;
       response = await fetch(
-        "http://localhost:8080/users/search?length=" + lengthInput.value
+        "http://localhost:8080/users/adults"
       );
     } 
     else if (minAge.value.length && maxAge.value.length) {
@@ -60,9 +60,10 @@ const fetchAndRenderUsers = async () => {
 }
 
 const addEventListeners = () => {
-  filterByLength.addEventListener("click", () => fetchAndRenderUsers())
+  filterByAdults.addEventListener("click", () => {adults="yes"
+    fetchAndRenderUsers()})
   resetFilters.addEventListener("click", () => {
-    lengthInput.value = ""
+    adults = "no"    
     maxAge.value = ""
     minAge.value = ""
     caption.innerHTML = ""
